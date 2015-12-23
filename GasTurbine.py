@@ -55,6 +55,30 @@ def eff_gt_rating(mw):
     return eff_gt
 
 
+<<<<<<< Updated upstream
+=======
+def ms_hrsg_rating(mw):
+        """主汽流量与燃机负荷
+        已知燃机负荷，求主蒸汽流量。
+        Arguments:
+            mw {[float]} -- 燃机负荷，单位：MW
+        """
+    pass
+
+
+def eff_gt(t, p, rh):
+    """[计算燃机效率]
+
+    [description]
+
+    Arguments:
+        t {[type]} -- [description]
+        p {[type]} -- [description]
+        rh {[type]} -- [description]
+    """
+    pass
+
+>>>>>>> Stashed changes
 if __name__ == '__main__':
     test = eff_gt_rating(150)
     print(test)

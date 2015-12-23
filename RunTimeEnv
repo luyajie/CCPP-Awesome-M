@@ -1,0 +1,32 @@
+[env]
+# abs tem
+T_ABS = 273.15
+
+[steamturbine]
+p_ms = 12.6
+t_ms = 550
+q_ms = 529
+
+p_hpt_exh = 3.4
+t_hpt_exh = 359
+
+eff_hpt = 0.95
+
+p_rhs = 3.1
+t_rhs = 545
+q_rhs = 630
+
+
+p_ipt_exh = 0.63
+t_ipt_exh = 313.5
+
+p_lps =
+t_lps =
+
+p_lpt_exh =
+t_lpt_exh = 
+
+p_cond =
+t_cond =
+
+

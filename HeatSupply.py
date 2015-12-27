@@ -1,26 +1,17 @@
 # !/usr/bin/env python
 # -*- coding: utf-8 -*-
+from iapws import IAPWS97
+import CONST
+from SteamTurbine import turbine_output
 """
 #########################
 计算热网系统供热量计算模块
 #########################
 """
 print(__doc__)
-from iapws import IAPWS97
-import CONST
-from SteamTurbine import turbine_output
+
 
 def heat_trans(p_in, t_in, p_out, t_out, med_flux):
-    """
-
-    :param p_rtn_wtr: 回水压力 MPa
-    :param t_rtn_wtr: 回水温度 DegC
-    :param p_sup_wtr: 供水压力 MPa
-    :param t_sup_wtr: 供水温度 DegC
-    :param wtr_flux: 供水流量 t/h
-    :return:heat_load: 供热负荷 GJ
-    """
-
     med_in = IAPWS97(P=p_in, T=t_in + 273.15)
     med_out = IAPWS97(P=p_out, T=t_out + 273.15)
     heat_load = (med_in.h - med_out.h) * med_flux / 1000

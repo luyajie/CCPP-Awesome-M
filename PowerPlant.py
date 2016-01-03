@@ -9,6 +9,7 @@ import os
 import CONST
 import matplotlib.pyplot as plt
 
+
 def load_dist(load):
     """[summary]
     
@@ -22,10 +23,13 @@ def load_dist(load):
     """
     return
 
+
 x1 = CONST.SAT_SX
 y1 = CONST.SAT_TY
 print(len(x1))
 print(len(y1))
-
-plt.plot(x1,y1)
+x = [6.6282, 6.7106, 7.3515, 7.3967, 5.8402,1.9161,6.6158]
+y = [550, 359, 544.7, 313.5, 32.8,159.3,552]
+plt.plot(x1, y1)
+plt.plot(x, y)
 plt.show()

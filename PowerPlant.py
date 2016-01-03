@@ -6,14 +6,8 @@
 # @Version : $Id$
 
 import os
-
-"""
-#########################
-联合循环机组计算模块
-#########################
-"""
-print(__doc__)
-
+import CONST
+import matplotlib.pyplot as plt
 
 def load_dist(load):
     """[summary]
@@ -26,4 +20,12 @@ def load_dist(load):
     Returns:
         [type] -- [description]
     """
-    return x
+    return
+
+x1 = CONST.SAT_SX
+y1 = CONST.SAT_TY
+print(len(x1))
+print(len(y1))
+
+plt.plot(x1,y1)
+plt.show()

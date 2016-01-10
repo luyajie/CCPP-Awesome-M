@@ -45,6 +45,27 @@ def gasflow_by_power(mw):
     return gas
 
 
+def cond_ttd(t,pc):
+    """
+    :summary: 凝汽器端差:汽轮机背压下饱和温度与凝汽器出口循环水温度的差值.
+    :param t: 凝汽器出口循环水温度,DegC.
+    :param pc: 汽轮机背压,MPa.a
+    :return: 凝汽器端差
+    """
+    ttd = IAPWS97(P = pc, x=1).T - t
+    return ttd
+
+def cond_wtr_sc(pc, tc):
+    """
+    :summary: 凝结水过冷度:汽轮机背压下饱和温度与凝汽器热井水温度的差值.
+    :param pc: 凝汽器背压.(kPa.a)
+    :param tc: 凝汽器热井水温度.(DefC)
+    :return:
+    """
+    deltaT = IAPWS97(P=pc, x=1).T - tc
+    return deltaT
+
+
 if __name__ == '__main__':
     CONFIGFILE = "RunTimeEnv"
     conf = configparser.ConfigParser()
